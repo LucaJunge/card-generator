@@ -1,0 +1,141 @@
+@font-face {
+  font-family: "Lilita One";
+  src: url("../assets/fonts/LilitaOne/LilitaOne-Regular.ttf");
+}
+
+:root {
+  --gradient-bottom: #134179ff;
+  --gradient-top: #317fdeff;
+  --border-radius-card: 16px;
+}
+
+html,
+body {
+  font-family: "Lilita One";
+  box-sizing: border-box;
+}
+
+body.debug * {
+  outline: 1px dotted red;
+}
+
+#card {
+  aspect-ratio: 10/4;
+  font-family: "Lilita One";
+  display: grid;
+  box-sizing: border-box;
+  grid-template-columns: 4fr 1fr;
+  column-gap: 10px;
+  position: relative;
+  border-radius: var(--border-radius-card);
+  padding: 32px;
+  margin: 32px;
+  background-size: 4em;
+  background-repeat: round round;
+  max-width: 640px;
+}
+
+#card #background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    var(--gradient-bottom),
+    var(--gradient-top)
+  );
+  border-radius: var(--border-radius-card);
+  z-index: -1;
+  background-size: 64px;
+  overflow: hidden; /* To clip the decoration elements to the card */
+}
+
+#card #background #decoration {
+  position: absolute;
+  top: -100%; /* these -100px shifts the whole background to fully cover the card, adjust if necessary */
+  left: -100%;
+  right: -100%;
+  bottom: -100%;
+  background-image: url("../logo-white.svg");
+  background-size: 60px; /* Adjust the size of the repeating images */
+  background-repeat: repeat;
+  opacity: 0.05;
+  z-index: -1;
+  transform: rotate(-15deg);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+#title {
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px;
+  font-size: 1.8em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#subtitle {
+  font-size: 1em;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 16px;
+}
+
+#list {
+  list-style: inside;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+ul li {
+  list-style-type: none;
+}
+ul li:before {
+  content: "• ";
+  margin-left: 0.3em;
+}
+
+#image {
+  position: absolute;
+  top: -100px; /* these -100px shifts the whole background to fully cover the card, adjust if necessary */
+  right: -100px;
+  background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.5)),
+    url("../logo-512.png");
+  background-size: cover; /* Adjust the size of the repeating images */
+  transform: rotate(6deg);
+}
+
+#ui {
+  display: flex;
+  justify-content: center;
+}
+
+#logo {
+  border-radius: 6px;
+  display: inline;
+  max-width: 32px;
+  max-height: 32px;
+}
+
+.button {
+  display: inline-block;
+  background-color: var(--gradient-top);
+  border-radius: 16px;
+  padding: 8px 16px;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  transition: all 0.1s ease;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--gradient-bottom);
+}

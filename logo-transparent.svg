@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="100mm"
+   height="100mm"
+   viewBox="0 0 100 100"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="logo-transparent.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:snap-bbox="true"
+     inkscape:snap-page="true"
+     inkscape:snap-text-baseline="true"
+     inkscape:snap-center="true"
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-midpoints="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:object-paths="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:bbox-nodes="true"
+     inkscape:bbox-paths="true"
+     showguides="false"
+     inkscape:guide-bbox="true"
+     borderlayer="true"
+     inkscape:zoom="1.5019781"
+     inkscape:cx="84.888055"
+     inkscape:cy="194.41029"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <sodipodi:guide
+       position="99.999999,50"
+       orientation="0,-1"
+       id="guide10002" />
+    <sodipodi:guide
+       position="50,0"
+       orientation="1,0"
+       id="guide10004" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient9899">
+      <stop
+         style="stop-color:#134179;stop-opacity:1"
+         offset="0"
+         id="stop9895" />
+      <stop
+         style="stop-color:#317fde;stop-opacity:1"
+         offset="1"
+         id="stop9897" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient9899"
+       id="linearGradient9901"
+       x1="53.106655"
+       y1="46.329411"
+       x2="53.106655"
+       y2="33.647049"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.8033445,0,0,1.8033445,-92.39257,-35.735549)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient9899"
+       id="linearGradient17819"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.8033445,0,0,1.8033445,-92.031302,-8.6150506)"
+       x1="53.106655"
+       y1="46.329411"
+       x2="53.106655"
+       y2="33.647049" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:31.809px;line-height:1;font-family:'Lilita One';-inkscape-font-specification:'Lilita One';fill:url(#linearGradient9901);fill-opacity:1;stroke-width:0.477134"
+       x="49.849987"
+       y="47.494255"
+       id="text2403"
+       inkscape:export-filename="C:\Users\Luca\repos\card-generator\logo.png"
+       inkscape:export-xdpi="8.1280003"
+       inkscape:export-ydpi="8.1280003"><tspan
+         sodipodi:role="line"
+         style="font-size:31.809px;text-align:center;text-anchor:middle;fill:url(#linearGradient9901);fill-opacity:1;stroke-width:0.477134"
+         x="49.849987"
+         y="47.494255"
+         id="tspan10606">CARD</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:31.809px;line-height:1;font-family:'Lilita One';-inkscape-font-specification:'Lilita One';fill:url(#linearGradient17819);fill-opacity:1;stroke-width:0.477134"
+       x="50.211254"
+       y="74.614754"
+       id="text2403-4"
+       inkscape:export-filename="C:\Users\Luca\repos\card-generator\logo.png"
+       inkscape:export-xdpi="8.1280003"
+       inkscape:export-ydpi="8.1280003"><tspan
+         sodipodi:role="line"
+         style="font-size:31.809px;text-align:center;text-anchor:middle;fill:url(#linearGradient17819);fill-opacity:1;stroke-width:0.477134"
+         x="50.211254"
+         y="74.614754"
+         id="tspan10606-4">GEN</tspan></text>
+  </g>
+</svg>

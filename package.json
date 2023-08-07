@@ -1,0 +1,16 @@
+{
+  "name": "card-generator",
+  "version": "0.0.1",
+  "description": "A generator for preview images and social media cards",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Luca Junge",
+  "license": "MIT",
+  "dependencies": {
+    "http-server": "^14.1.1",
+    "normalize.css": "^8.0.1"
+  }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Generator</title>
+    <link rel="icon" href="logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="html2canvas.min.js"></script>
+  </head>
+  <body>
+    <div id="card">
+      <div class="info">
+        <header>
+          <img id="logo" src="logo-512.png" />
+          <h1 id="title" contenteditable="true">Card Generator</h1>
+        </header>
+        <p id="subtitle" contenteditable="true">
+          Create your own card for social media or GitHub by typing in this box!
+        </p>
+        <ul id="list" contenteditable="true">
+          <li>Describe the features of your project in this list</li>
+          <li>You can add multiple elements</li>
+          <li>And use <span>✨ custom markup ✨</span></li>
+        </ul>
+      </div>
+      <!--img id="image" src="logo-512.png" /-->
+      <div id="background">
+        <div id="decoration"></div>
+      </div>
+    </div>
+
+    <div id="ui">
+      <a id="download-button" class="button">Download</a>
+    </div>
+    <script>
+      let downloadButton = document.querySelector("#download-button")
+      downloadButton.addEventListener("click", () => {
+        let card = document.querySelector("#card")
+
+        let options = {
+          backgroundColor: null,
+          scale: 5,
+        }
+
+        html2canvas(card, options).then(function (canvas) {
+          const dataURL = canvas.toDataURL("image/png")
+
+          const downloadLink = document.createElement("a")
+          downloadLink.href = dataURL
+
+          // maybe add the timestamp here
+          downloadLink.download = "card.png"
+
+          downloadLink.click()
+        })
+      })
+    </script>
+  </body>
+</html>
