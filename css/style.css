@@ -7,6 +7,8 @@
   --gradient-bottom: #134179ff;
   --gradient-top: #317fdeff;
   --border-radius-card: 16px;
+  --background-logo-opacity: 0.05;
+  --background-logo-size: 60px;
 }
 
 html,
@@ -43,8 +45,8 @@ body.debug * {
   height: 100%;
   background-image: linear-gradient(
     to bottom,
-    var(--gradient-bottom),
-    var(--gradient-top)
+    var(--gradient-top),
+    var(--gradient-bottom)
   );
   border-radius: var(--border-radius-card);
   z-index: -1;
@@ -59,9 +61,11 @@ body.debug * {
   right: -100%;
   bottom: -100%;
   background-image: url("../logo-white.svg");
-  background-size: 60px; /* Adjust the size of the repeating images */
+  background-size: var(
+    --background-logo-size
+  ); /* Adjust the size of the repeating images */
   background-repeat: repeat;
-  opacity: 0.05;
+  opacity: var(--background-logo-opacity);
   z-index: -1;
   transform: rotate(-15deg);
 }
@@ -115,6 +119,15 @@ ul li:before {
 #ui {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+#ui > div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 #logo {

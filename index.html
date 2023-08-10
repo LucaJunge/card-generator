@@ -32,10 +32,82 @@
     </div>
 
     <div id="ui">
+      <div id="bgcolor-top-wrapper">
+        <input
+          type="color"
+          id="background-color-top"
+          name="background-color-top"
+          value="#317fde"
+        />
+        <label for="background-color-top">Background Color Top</label>
+      </div>
+      <div id="bgcolor-bottom-wrapper">
+        <input
+          type="color"
+          id="background-color-bottom"
+          name="background-color-bottom"
+          value="#134179"
+        />
+        <label for="background-color-bottom">Background Color Bottom</label>
+      </div>
+      <div id="opacity-wrapper">
+        <input
+          type="range"
+          id="opacity"
+          name="opacity"
+          min="0.0"
+          max="1.0"
+          value="0.05"
+          step="0.01"
+        />
+        <label for="opacity">Opacity</label>
+      </div>
+      <div id="logo-background-size-wrapper">
+        <input
+          type="range"
+          id="logo-background-size"
+          name="opacity"
+          min="0.1"
+          max="300.0"
+          value="60"
+          step="1"
+        />
+        <label for="opacity">Logo Background Size</label>
+      </div>
+      <div id="logo-wrapper">
+        <input
+          type="file"
+          id="logo-input"
+          name="logo"
+          accept="image/png, image/jpeg"
+        />
+        <label for="logo">Logo</label>
+      </div>
+
+      <div id="logo-background-wrapper">
+        <input
+          type="file"
+          id="logo-background-input"
+          name="logo-background"
+          accept="image/png, image/jpeg"
+        />
+        <label for="logo-background">Logo Background</label>
+      </div>
       <a id="download-button" class="button">Download</a>
     </div>
     <script>
       let downloadButton = document.querySelector("#download-button")
+      let bgColorTopInput = document.querySelector("#background-color-top")
+      let bgColorBottomInput = document.querySelector(
+        "#background-color-bottom"
+      )
+      let opacitySlider = document.querySelector("#opacity")
+      let logoInput = document.querySelector("#logo-input")
+      let logoBackground = document.querySelector("#logo-background-input")
+      let logoBackgroundSize = document.querySelector("#logo-background-size")
+
+      const root = document.documentElement
+
       downloadButton.addEventListener("click", () => {
         let card = document.querySelector("#card")
 
@@ -55,6 +127,41 @@
 
           downloadLink.click()
         })
+      })
+
+      bgColorTopInput.addEventListener("input", (event) => {
+        root.style.setProperty("--gradient-top", event.target.value)
+      })
+
+      bgColorBottomInput.addEventListener("input", (event) => {
+        root.style.setProperty("--gradient-bottom", event.target.value)
+      })
+
+      opacitySlider.addEventListener("input", (event) => {
+        root.style.setProperty("--background-logo-opacity", event.target.value)
+      })
+
+      logoBackgroundSize.addEventListener("input", (event) => {
+        root.style.setProperty(
+          "--background-logo-size",
+          event.target.value + "px"
+        )
+      })
+
+      logoInput.addEventListener("change", (event) => {
+        let logoImage = document.querySelector("#logo")
+
+        const reader = new FileReader()
+        reader.onload = (e) => {
+          logoImage.src = e.target.result
+        }
+        reader.readAsDataURL(event.target.files[0])
+      })
+
+      logoBackground.addEventListener("change", (event) => {
+        let backgroundDecoration = document.querySelector("#decoration")
+        const imageUrl = URL.createObjectURL(event.target.files[0])
+        backgroundDecoration.style.backgroundImage = `url("${imageUrl}")`
       })
     </script>
   </body>
